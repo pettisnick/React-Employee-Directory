@@ -31,5 +31,5 @@ Nick Pettis
 ## Contact
 
 For additional questions, contact me at: 
- #[GITHUB PROFILE](https://github.com/pettisnick)
+ [GITHUB PROFILE](https://github.com/pettisnick)
  
