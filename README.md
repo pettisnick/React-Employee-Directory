@@ -2,7 +2,7 @@
 
 ## Overview
 
-Using React and the Random User API, you will create an employee directory. This directory will require you to break up your application's UI into components, manage component state, and respond to user events. In this directory you will be able to view your entire list of employees while also searching by an employee just by typing a first or last name.
+Using React and the [Random User API](randomuser.me), you will create an employee directory. This directory will require you to break up your application's UI into components, manage component state, and respond to user events. In this directory you will be able to view your entire list of employees while also searching by an employee just by typing a first or last name.
 
 ![directory](https://user-images.githubusercontent.com/65740432/97121502-13ce0700-16f5-11eb-9e67-e1f70694d2d8.PNG)
 
