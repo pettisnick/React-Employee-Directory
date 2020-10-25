@@ -4,6 +4,8 @@
 
 Using React, you will create an employee directory. This directory will require you to break up your application's UI into components, manage component state, and respond to user events.
 
+![directory](https://user-images.githubusercontent.com/65740432/97121502-13ce0700-16f5-11eb-9e67-e1f70694d2d8.PNG)
+
 ## User Story
 
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
