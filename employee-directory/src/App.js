@@ -1,20 +1,19 @@
-import React from 'react';
-import './App.css';
-import Search from "./components/Search";
-import Container from "./components/Container";
-import Table from "./components/Table";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.css";
+import Wrapper from "./components/Wrapper";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
-    <Container>
-      <Search />
-      <Table />
-    </Container>  
-    </div>
+    <Wrapper>
+      <Router>
+        <div>
+          <Route exact path="/" component={Home} />
+        </div>
+      </Router>
+    </Wrapper>
   );
 }
 
 export default App;
-
-
