@@ -3,18 +3,18 @@ import "./style.css";
 
 function NameSearch(props) {
   return (
+    //create search box for finding employees quicker
     <form className="search">
       <div className="form-group">
-        <label htmlFor="language">Search Employee:</label>
+        <label htmlFor="language">Search for Employee:</label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
-          name="term"
-          list="term"
+          name="search"
+          aria-label="Search"
           type="text"
           className="form-control"
-          placeholder="Serach by First Name, Last Name, Email or Phone"
-          id="term"
+          placeholder="Begin typing to search by name"
         />
         </div>
     </form>

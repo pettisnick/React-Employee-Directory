@@ -10,17 +10,20 @@ function Home() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
+    //using the employee info from the API 
     API.getEmpoloyeeInfo()
       .then((res) => {
+        //returns the employees and all the results
         setEmployees(res.data.results);
         setResults(res.data.results);
       })
       .catch((err) => console.log(err));
   }, []);
 
-  const filterEmployees = (term) => {
+  const filterEmployees = () => {
     return employees.filter(
       (employee) =>
+      //filters through employees and returns employees as requested
         employee.name.first ||
         employee.name.last ||
         employee.email ||
@@ -28,9 +31,9 @@ function Home() {
     );
   };
 
-  const handleInputChange = (event) => {
-    setSearch(event.target.value);
-    setResults(filterEmployees(event.target.value));
+  const handleInputChange = (e) => {
+    setSearch(e.target.value);
+    setResults(filterEmployees(e.target.value));
   };
 
   return (
