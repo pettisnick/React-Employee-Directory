@@ -31,3 +31,5 @@ Nick Pettis
 ## Contact
 
 For additional questions, contact me at
+ [GITHUB PROFILE](github.com/pettisnick)
+ [EMAIL](pettisnick@gmail.com)
