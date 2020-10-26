@@ -2,7 +2,9 @@
 
 ## Overview
 
-Using React, you will create an employee directory. This directory will require you to break up your application's UI into components, manage component state, and respond to user events.
+Using React and the [Random User API](https://randomuser.me/), you will create an employee directory. This directory will require you to break up your application's UI into components, manage component state, and respond to user events. In this directory you will be able to view your entire list of employees while also searching by an employee just by typing a first or last name.
+
+![directory](https://user-images.githubusercontent.com/65740432/97121502-13ce0700-16f5-11eb-9e67-e1f70694d2d8.PNG)
 
 ## User Story
 
@@ -21,3 +23,13 @@ The user should be able to:
   * Sort the table by at least one category
 
   * Filter the users by at least one property.
+
+## Contributors
+
+Nick Pettis
+
+## Contact
+
+For additional questions, contact me at: 
+ [GITHUB PROFILE](https://github.com/pettisnick)
+ 
