@@ -4,6 +4,7 @@ import Container from "../components/Container";
 import NameSearch from "../components/NameSearch";
 import Table from "../components/Table";
 
+
 function Home() {
   const [employees, setEmployees] = useState([]);
   const [search, setSearch] = useState("");
@@ -17,7 +18,7 @@ function Home() {
         setEmployees(res.data.results);
         setResults(res.data.results);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, []);
 
   const filterEmployees = () => {
