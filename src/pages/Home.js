@@ -4,54 +4,44 @@ import Container from "../components/Container";
 import NameSearch from "../components/NameSearch";
 import Table from "../components/Table";
 
-
 function Home() {
   //set up State for any variable that we expect to change together
-  //useState is expected to return an array 
+  //useState is expected to return an array
   const [employees, setEmployees] = useState([]);
   //useState is expected to return a string
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
-  
 
   //similar to componentDidMount, makes an API call and render some data as soon as the component loads
   //useEffect takes in a parameter that is a function, and the function runs as soon as the component mounts
   useEffect(() => {
-    //'search' represents the current state of our searchState, searchTerm
-    if (!search) {
-      return;
-    }
-    //getEmployeeInfo is the API function name 
-    API.getEmpoloyeeInfo(search)
+    //getEmployeeInfo is the API function name
+    API.getEmpoloyeeInfo()
       .then((res) => {
-        if (res.data.length === 0) {
-          //throw error in body of function
-          throw new Error("No results found!");
-        }
-        //if we get an error
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
         //set state after we get response and makes app re-render
         setEmployees(res.data.results);
         setResults(res.data.results);
       })
-      .catch(err => console.log(err));
-      //everytime you type in a new character, you are changing the value of the variable which is prompting the useEffect to run 
+      .catch((err) => console.log(err));
+    //everytime you type in a new character, you are changing the value of the variable which is prompting the useEffect to run
   }, [search]);
 
-  const filterEmployees = () => {
+  //value is what the user has typed
+  const filterEmployees = (value) => {
     return employees.filter(
       (employee) =>
-      //filters through employees and returns employees as requested
-        employee.name.first ||
-        employee.name.last ||
-        employee.email ||
-        employee.phone
+        //filter the employee array and build a new array
+        //give statement that returns true if we want to add word to the array or false if we don't
+        //if the employee first name contains the value,
+        employee.name.first.toString().indexOf(value) > -1
     );
   };
 
+  //event is typing in the letters
+  //target is the input
+  //value is what has been typed
   const handleInputChange = (e) => {
+    console.log(e);
     setSearch(e.target.value);
     setResults(filterEmployees(e.target.value));
   };

@@ -10,9 +10,10 @@ function NameSearch(props) {
         <input
           value={props.search}
           onChange={props.handleInputChange}
-          name="search"
+          name="term"
           aria-label="Search"
-          type="search"
+          type="text"
+          list="term"
           className="form-control"
           placeholder="Begin typing to search by name"
         />
