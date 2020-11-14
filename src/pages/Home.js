@@ -21,10 +21,11 @@ function Home() {
         //set state after we get response and makes app re-render
         setEmployees(res.data.results);
         setResults(res.data.results);
+        console.log(res.data.results);
       })
       .catch((err) => console.log(err));
     //everytime you type in a new character, you are changing the value of the variable which is prompting the useEffect to run
-  }, [search]);
+  }, []);
 
   //value is what the user has typed
   const filterEmployees = (value) => {
@@ -33,7 +34,9 @@ function Home() {
         //filter the employee array and build a new array
         //give statement that returns true if we want to add word to the array or false if we don't
         //if the employee first name contains the value,
-        employee.name.first.toString().indexOf(value) > -1
+        employee.name.first.toLowerCase().trim().indexOf(value.toLowerCase()) > -1 ||
+        employee.name.last.toLowerCase().trim().indexOf(value.toLowerCase()) > - 1 ||
+        employee.email.toLowerCase().trim().indexOf(value.toLowerCase()) > - 1 
     );
   };
 
