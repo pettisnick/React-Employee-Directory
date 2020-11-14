@@ -33,7 +33,7 @@ function Home() {
       (employee) =>
         //filter the employee array and build a new array
         //give statement that returns true if we want to add word to the array or false if we don't
-        //if the employee first name contains the value,
+        //toLowerCase() converts a string to lowercase letters; and trim() removes whitespace from both sides of a string. || means 'or'
         employee.name.first.toLowerCase().trim().indexOf(value.toLowerCase()) > -1 ||
         employee.name.last.toLowerCase().trim().indexOf(value.toLowerCase()) > - 1 ||
         employee.email.toLowerCase().trim().indexOf(value.toLowerCase()) > - 1 
